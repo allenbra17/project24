@@ -6,15 +6,15 @@ import App from "./App";
 const key = "4Nblt4UKTyRD9c4b3BNdEpqwvYNc1FyR";
 
 const TixApp = (props) => {
-    // const lat = 41.8781
-    // const long = 87.6298
+    const lat = 41.8781
+    const long = 87.6298
+    const url = `https://app.ticketmaster.com/discovery/v2/events.json?latlong=${lat},${long}&apikey=${key}`;
     
     const [name, setName] = useState("");
     const [date, setDate] = useState("");
     const [type, setType] = useState("");
     const [events, setEvents] = useState([]);
     
-    const url = `https://app.ticketmaster.com/discovery/v2/events.json?latlong=${lat},${long}&apikey=${key}`;
 
     useEffect(() => {
         fetch(url)
@@ -22,6 +22,7 @@ const TixApp = (props) => {
             return res.json()
         }) .then((data)=> {
             console.log(data._embedded.events)
+            setEvents(data._embedded.events.name)
         })
         
     }, []);

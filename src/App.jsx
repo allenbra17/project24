@@ -21,12 +21,18 @@ function App() {
       })
     }
   }
+
+  useEffect(() => {
+    userLocation()
+  }, []);
    
 
   return (
     <div className="App">
       <header className="App-header">
-        <TixApp />
+        <TixApp lat={lat} long={long}/>
+        {lat}
+        {long}
       </header>
     </div>
   );
