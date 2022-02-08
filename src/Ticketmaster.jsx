@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
+import App from "./App";
 
 // https://app.ticketmaster.com/discovery/v2/events.json?latlong=34.0522,-118.2437&apikey=4Nblt4UKTyRD9c4b3BNdEpqwvYNc1FyR
 
 const key = "4Nblt4UKTyRD9c4b3BNdEpqwvYNc1FyR";
 
 const TixApp = (props) => {
-    const lat = 41.8781
-    const long = 87.6298
+    // const lat = 41.8781
+    // const long = 87.6298
     
     const [name, setName] = useState("");
     const [date, setDate] = useState("");
