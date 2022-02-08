@@ -1,5 +1,6 @@
+import './App.css';
+import WeatherApp from './Weather';
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import NasaImage from "./NASA";
 
 
@@ -28,6 +29,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <WeatherApp/>
         <NasaImage 
         lat={lat}
         long={long}/>
