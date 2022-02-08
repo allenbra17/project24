@@ -35,10 +35,10 @@ function App() {
         <div className="component">
           <h4>Current Temperature</h4>
           <h4>for Your Location</h4>
-          <WeatherApp/>
+          <WeatherApp />
+          {/* <WeatherApp lat={lat} long={long}/> */}
           <br />
-          <h4>Satelite Image</h4>
-          <h4>of Your Location</h4>
+          <h4>Satelite Image of Your Location</h4>
           <NasaImage lat={lat} long={long} />
         </div>
         <div className="component">
