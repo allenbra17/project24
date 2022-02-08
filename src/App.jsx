@@ -2,6 +2,7 @@ import './App.css';
 import WeatherApp from './Weather';
 import React, { useState, useEffect } from "react";
 import NasaImage from "./NASA";
+// import TixApp from './Ticketmaster';
 
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>Group 1's Weather App</h1>
+        <h3>Brad, Chris, and Lance</h3>
         <WeatherApp
         lat={lat}
         long={long}/>
@@ -36,7 +39,26 @@ function App() {
         lat={lat}
         long={long}/>
       </header>
-    </div>
+        <div className="component">
+          <WeatherApp lat={lat} long={long}/>
+          <br />
+          <h4>Satelite Image of Your Location</h4>
+          <NasaImage lat={lat} long={long} />
+        </div>
+        <div className="component">
+          {/* <TixApp lat={lat} long={long}/> */}
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+        </div>
+      </div>
   );
 }
 
