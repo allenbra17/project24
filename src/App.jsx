@@ -39,10 +39,18 @@ function App() {
           <h4>Satelite Image of Your Location</h4>
           <NasaImage lat={lat} long={long} />
         </div>
-
-        
         <div className="component">
           {/* <TixApp lat={lat} long={long}/> */}
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
         </div>
       </div>
   );
