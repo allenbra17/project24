@@ -29,7 +29,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <WeatherApp/>
+        <WeatherApp
+        lat={lat}
+        long={long}/>
         <NasaImage 
         lat={lat}
         long={long}/>
