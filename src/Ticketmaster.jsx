@@ -52,7 +52,7 @@ const TixApp = (props) => {
   return (
     <>
       <h1>Hello from Ticketmaster</h1>
-      <Table>
+      {/* <Table>
         <thead>
           <tr>
             <th Name={name}></th>
@@ -61,7 +61,7 @@ const TixApp = (props) => {
           </tr>
         </thead>
         <tbody>{eventMapper()}</tbody>
-      </Table>
+      </Table> */}
     </>
   );
 };
