@@ -30,17 +30,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-<<<<<<< HEAD
         <h1>Group 1's Weather App</h1>
         <h3>Brad, Chris, and Lance</h3>
-=======
         <WeatherApp
         lat={lat}
         long={long}/>
         <NasaImage 
         lat={lat}
         long={long}/>
->>>>>>> master
       </header>
         <div className="component">
           <WeatherApp lat={lat} long={long}/>
