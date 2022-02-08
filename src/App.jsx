@@ -2,12 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import NasaImage from "./NASA";
 
-
 function App() {
-  var options = {
+  const options = {
     enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0
   };
   const [lat, setLat] = useState("");
   const [long, setLong] = useState("");
@@ -28,10 +25,23 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <NasaImage 
-        lat={lat}
-        long={long}/>
+        <h1>Group 1's Weather App</h1>
+        <h3>Brad, Chris, and Lance</h3>
       </header>
+      <div className="row">
+        <div className="left">
+          <h4>Current Weather</h4>
+          <h4>for Your Location</h4>
+          <div className="weather">weather component</div>
+          <h4>Satelite Image</h4>
+          <h4>of Your Location</h4>
+          <NasaImage lat={lat} long={long} />
+        </div>
+        <div className="right">
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+        </div>
+      </div>
     </div>
   );
 }

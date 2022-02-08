@@ -33,7 +33,7 @@ const [image, setImage] = useState('');
 
     return ( 
         <div>
-            <img src={image} alt="" width= '500px' height='500px'/>
+            <img src={image} alt="NASA" width= '250px' height='250px'className='nasaImage'/>
         </div>
      );
 }
