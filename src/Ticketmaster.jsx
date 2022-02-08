@@ -50,20 +50,19 @@ const TixApp = (props) => {
   }, [lat, long]);
 
   return (
-    // <>
+    <>
       <h1>Hello from Ticketmaster</h1>
-    //   <Table>
-    //     <thead>
-    //       <tr>
-    //         <th>#</th>
-    //         <th>Name</th>
-    //         <th>Date</th>
-    //         <th>Type</th>
-    //       </tr>
-    //     </thead>
-    //     <tbody>{eventMapper()}</tbody>
-    //   </Table>
-    // </>
+      <Table>
+        <thead>
+          <tr>
+            <th Name={name}></th>
+            <th Date={date}></th>
+            <th Type={type}></th>
+          </tr>
+        </thead>
+        <tbody>{eventMapper()}</tbody>
+      </Table>
+    </>
   );
 };
 
