@@ -4,19 +4,21 @@
 }
 .App {
   background-color: rgb(6, 138, 19);
-  color: black
+  color: black;
+  text-align: center;
 }
 
 
-.row {
-  display: flex;
-  flex-direction: row;
+.component {
+  text-align: center;
+  display: inline-block
+  /* flex-direction: row; */
   }
 
-.left {
-  margin-right: 45%;
+/* .left {
+  margin-right: 300px;
 }
 
 .right {
   margin-left: 45%
-}
+} */
