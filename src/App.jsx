@@ -1,38 +1,37 @@
-import React from "react";
 import "./App.css";
+import WeatherApp from "./Weather";
+import React, { useState, useEffect } from "react";
+import NasaImage from "./NASA";
 import TixApp from "./Ticketmaster";
 
 function App() {
-  const [lat, setLat] = useState('');
-  const [long, setLong] = useState('');
-  const [status, setStatus] = useState();
+  var options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0,
+  };
+  const [lat, setLat] = useState("");
+  const [long, setLong] = useState("");
+  function success(pos) {
+    var crd = pos.coords;
+    setLat(crd.latitude);
+    setLong(crd.longitude);
+  }
 
-  const userLocation = () => {
-    if (!navigator.geolocation){
-      setStatus('Geolocation is not supported by your browser');
-    } else {
-      setStatus('Locating...');
-      navigator.geolocation.getCurrentPosition((position) => {
-        setStatus(null);
-        setLat(position.coords.latitude);
-        setLong(position.coords.longitude);
-      }, () => {
-        setStatus("Unable to retrieve your location");
-      })
-    }
+  function error(err) {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
   }
 
   useEffect(() => {
-    userLocation()
+    navigator.geolocation.getCurrentPosition(success, error, options);
   }, []);
-   
 
   return (
     <div className="App">
       <header className="App-header">
-        <TixApp lat={lat} long={long}/>
-        {lat}
-        {long}
+        <TixApp lat={lat} long={long} />
+        <WeatherApp /*lat={lat} long={long}*/ />
+        <NasaImage lat={lat} long={long} />
       </header>
     </div>
   );
