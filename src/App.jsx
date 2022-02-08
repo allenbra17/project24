@@ -29,12 +29,31 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <WeatherApp/>
-        <NasaImage 
-        lat={lat}
-        long={long}/>
+        <h1>Group 1's Weather App</h1>
+        <h3>Brad, Chris, and Lance</h3>
       </header>
-    </div>
+        <div className="component">
+          <h4>Current Temperature</h4>
+          <h4>for Your Location</h4>
+          <WeatherApp/>
+          <br />
+          <h4>Satelite Image</h4>
+          <h4>of Your Location</h4>
+          <NasaImage lat={lat} long={long} />
+        </div>
+        <div className="component">
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+          <h4>Events Coming up near you</h4>
+          Ticketmaster Component
+        </div>
+      </div>
   );
 }
 
