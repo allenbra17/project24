@@ -29,7 +29,7 @@ console.log(checkUnits(true));
 console.log(checkUnits(false));
 // expected output: "fahr" */
 async function fetchWeather () {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIkey}`
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${APIkey}`
 try{    
     const response = await fetch(url);
     const data = await response.json();

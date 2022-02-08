@@ -33,8 +33,6 @@ function App() {
         <h3>Brad, Chris, and Lance</h3>
       </header>
         <div className="component">
-          <h4>Current Temperature</h4>
-          <h4>for Your Location</h4>
           <WeatherApp />
           {/* <WeatherApp lat={lat} long={long}/> */}
           <br />
