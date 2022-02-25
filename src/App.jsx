@@ -32,17 +32,11 @@ function App() {
       <header className="App-header">
         <h1>Group 1's Weather App</h1>
         <h3>Brad, Chris, and Lance</h3>
-        <WeatherApp
-        lat={lat}
-        long={long}/>
-        <NasaImage 
-        lat={lat}
-        long={long}/>
       </header>
         <div className="component">
           <WeatherApp lat={lat} long={long}/>
           <br />
-          <h4>Satelite Image of Your Location</h4>
+          <h4>Satellite Image of Your Location</h4>
           <NasaImage lat={lat} long={long} />
         </div>
         <div className="component">
